@@ -6,8 +6,6 @@ from pylsl import StreamInlet, resolve_stream
 import time
 import tensorflow as tf
 import numpy as np
-import mne
-import pandas as pd
 import threading  
 
 
@@ -19,13 +17,6 @@ n_samples = Wn * Fs
 def load_model(model_path):
     return tf.keras.models.load_model(model_path)
 
-def convertDF2MNE(sub):
-    info = mne.create_info(list(sub.columns), ch_types=['eeg'] * len(sub.columns), sfreq=256)
-    info.set_montage('standard_1020')
-    data = mne.io.RawArray(sub.T, info)
-    data.set_eeg_reference()
-    epochs = mne.make_fixed_length_epochs(data, duration=Wn, overlap=0.2 * Wn)
-    return epochs.get_data()
 
 def predict(x_pred):
     x_pred = np.transpose(x_pred, (0, 2, 1))
