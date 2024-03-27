@@ -1,4 +1,6 @@
-Record and viewing EEG DATA : 
+# Record and viewing EEG DATA : 
+
+Material required : Muse 2
 
 1. pip install muselsl
 2. Lauch the stream in a new window : muselsl stream
