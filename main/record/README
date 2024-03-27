@@ -1,0 +1,18 @@
+Record and viewing EEG DATA : 
+
+1. pip install muselsl
+2. Lance le stream dans une fenêtre : muselsl stream
+3. Lance la visualisation : muselsl view ou muselsl view --version 2
+4. Record for 60 seconds into a csv file : muselsl record --duration 60
+
+Protocol Recording : 
+
+1. The participant is sitting down on a chair with arms extended in parallel, resting on a table. 
+2. Two bottles of water are on the table, approximately 5 cm to the left and right hand. 
+3. The participant’s head faces forward, while the eyes rotate to the left or to the right, looking to the bottle. 
+4. We asked the participant to imagine picking up the bottle with the left hand, but without 
+moving the hand only thinking about it for 5 s. 
+5. Then, we asked the participant to relax and to close the eyes for 5 s. 
+6. We move the bottle on the right side of the table 
+7. The participant repeats steps 3–5, but for right hand motor imagery. 
+8. We repeated steps 2–7 for 20 times for each participant.

@@ -1,0 +1,16 @@
+1. Sequencing the prediction window every second: 
+
+=> A window is created every second with the number of samples calculated with the sampling rate of 256 Hz: n_samples = Wn*Fs
+Then the model makes a prediction every second.  
+
+
+2. Sequencing the prediction window every 0.05 s to make 20 predictions per s: 20 frames per s
+=> Stream for  1s : delta = 0.05 s
+    1. t0 début du stream -> t1 fin du stream : 1rst prediction
+    2. t0 + delat -> t2 = t1 + delta : 2nd prediction
+    3. t0 + 2*delta -> t3 = t1 + 2*delta : 3rd prediction
+    . 
+    .
+    .
+    n-1. t0+ (n-2)*delta -> tn-1 = t1 + (n-2)*delta : n-1 prediction
+    n. t0 + (n-1)*delta -> tn = t1 + (n-1)*delta : n prediction
