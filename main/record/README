@@ -1,8 +1,8 @@
 Record and viewing EEG DATA : 
 
 1. pip install muselsl
-2. Lance le stream dans une fenêtre : muselsl stream
-3. Lance la visualisation : muselsl view ou muselsl view --version 2
+2. Lauch the stream in a new window : muselsl stream
+3. Launch the visualisation : muselsl view ou muselsl view --version 2
 4. Record for 60 seconds into a csv file : muselsl record --duration 60
 
 Protocol Recording : 
